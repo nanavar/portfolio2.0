@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Ana Maria Kim Vargason</title>
+  </head>
+
+  <body>
+    <!--- NAVIGATION -->
+    <div class="navigation">
+      <div class="menuToggle"></div>
+      <ul>
+        <li class="list" style="--clr: #e9ebed">
+          <a href="#">
+            <span class="icon"><i class="bx bx-home-alt"></i></span>
+            <span class="text"> Home</span>
+          </a>
+        </li>
+        <li class="list" style="--clr: #e9ebed">
+          <a href="#">
+            <span class="icon"><i class="bx bx-user-circle"></i></span>
+            <span class="text"> About me</span>
+          </a>
+        </li>
+        <li class="list" style="--clr: #e9ebed">
+          <a href="#">
+            <span class="icon"><i class="bx bx-code-block"></i></span>
+            <span class="text"> Portfolio</span>
+          </a>
+        </li>
+        <li class="list" style="--clr: #e9ebed">
+          <a href="#">
+            <span class="icon"><i class="bx bxs-wrench"></i></span>
+            <span class="text"> Skills</span>
+          </a>
+        </li>
+        <li class="list" style="--clr: #e9ebed">
+          <a href="#">
+            <span class="icon"><i class="bx bx-mail-send"></i></span>
+            <span class="text"> Contact</span>
+          </a>
+        </li>
+        <li class="list" style="--clr: #e9ebed">
+          <a href="#">
+            <span class="icon"><i class="bx bxl-linkedin-square"></i></span>
+            <span class="text"> LinkedIn</span>
+          </a>
+        </li>
+        <li class="list" style="--clr: #e9ebed">
+          <a href="#">
+            <span class="icon"><i class="bx bxl-github"></i></span>
+            <span class="text"> Github</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- CONTENT -->
+
+    <div class="container">
+      <div class="text">
+        <h1>Ana Maria Kim Vargason</h1>
+        <h2>Portfolio</h2>
+        <div class="icons">
+          <i class="bx bxl-html5"></i>
+          <i class="bx bxl-css3"></i>
+          <i class="bx bxl-sass"></i>
+          <i class="bx bxl-bootstrap"></i>
+          <i class="bx bxl-python"></i>
+          <i class="bx bxl-javascript"></i>
+        </div>
+        <p
+          >Lorem ipsum dolor sit amet consectetur, <br />adipisicing elit. Ea
+          impedit <br />voluptatum tempore assumendavoluptate
+        </p>
+        <div class="button">
+          <p
+            >Download my CV here:
+            <a href="#">
+              <svg
+                class="download"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 40 40"
+              >
+                <defs>
+                  <style>
+                    .cls-1 {
+                      fill: #557377;
+                    }
+
+                    .cls-2 {
+                      fill: none;
+                      stroke: #557377;
+                      stroke-width: 2px;
+                    }
+                  </style>
+                </defs>
+                <rect
+                  class="cls-1 line"
+                  x="8.73"
+                  y="28.85"
+                  width="22.54"
+                  height="1.61"
+                />
+                <polygon
+                  class="arrow cls-1"
+                  points="27.24 18.39 26.11 17.25 20.8 22.55 20.8 7.92 19.2 7.92 19.2 22.55 13.89 17.25 12.76 18.38 20 25.63 27.24 18.39"
+                />
+                <circle class="cls-2" cx="20" cy="20" r="19" />
+              </svg>
+            </a>
+          </p>
+        </div>
+      </div>
+      <div class="profile">
+        <img src="/profile.jpg" alt="" />
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="rights">
+      <small>&copy; Copyright 2022, NanaCodes</small>
+    </div>
+    <!-- JAVASCRIPT -->
+    <script>
+      const menuToggle = document.querySelector(".menuToggle");
+      const navigation = document.querySelector(".navigation");
+
+      menuToggle.onclick = function () {
+        navigation.classList.toggle("open");
+      };
+
+      const list = document.querySelectorAll(".list");
+      function activelink() {
+        list.forEach((item) => item.classList.remove("active"));
+        this.classList.add("active");
+      }
+      list.forEach((item) => item.addEventListener("click", activelink));
+    </script>
+  </body>
+</html>
